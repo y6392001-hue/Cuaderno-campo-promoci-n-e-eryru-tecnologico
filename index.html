@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuaderno de campo Ñe'ẽryru</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Lora:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="cover">
+  <div class="wrap">
+    <div class="top">
+      <span class="label">Cuaderno de campo · Proyecto de Promoción · 2º BATÍN</span>
+      <button class="theme" id="themeBtn" type="button">Modo oscuro</button>
+    </div>
+    <h1>Ñe'ẽryru Tecnológico</h1>
+    <p>Bitácora del proyecto: un catálogo en tablet para la biblioteca del colegio, que muestra si un libro está disponible, cuántos ejemplares hay y dónde está. Aquí quedan registradas las observaciones, las decisiones y lo que falta.</p>
+    <dl class="meta">
+      <div><dt>Institución</dt><dd>Miguela Rodriguez Araujo</dd></div>
+      <div><dt>Curso / turno</dt><dd>2º BATÍN · Mañana-Tarde</dd></div>
+      <div><dt>Docente tutora</dt><dd>R. Daniela Ferreira-Delgado</dd></div>
+      <div><dt>Etapa actual</dt><dd>2º año · Octubre 2026</dd></div>
+    </dl>
+  </div>
+</header>
+
+<nav class="sec" aria-label="Secciones"><div class="wrap">
+  <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú de secciones"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Menú</span></button>
+  <div class="menu" id="menu" hidden>
+    <a href="#bitacora">Bitácora</a><a href="#alcance">Alcance</a><a href="#interfaz">Interfaz</a><a href="#pruebas">Pruebas</a><a href="#cronograma">Cronograma</a><a href="#equipo">Equipo</a><a href="#nueva">Nueva entrada</a><a href="#refs">Referencias</a>
+  </div>
+</div></nav>
+
+<main class="wrap">
+
+<section id="bitacora">
+  <h2>Bitácora</h2>
+  <p class="lead">Cada entrada separa lo que se observó de lo que el equipo interpreta, como se hace en un cuaderno de campo. Podés filtrar por tipo de registro.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filtrar entradas"></div>
+  <div class="entries" id="entries"></div>
+</section>
+
+<section id="alcance">
+  <h2>Alcance y funcionalidades</h2>
+  <p class="lead">Estado de las cinco funcionalidades priorizadas con el método MoSCoW en el anteproyecto de 1º curso.</p>
+  <div class="summary">
+    <div><b>5</b>funcionalidades priorizadas</div>
+    <div><b>0</b>implementadas</div>
+    <div><b>3</b>de prioridad alta</div>
+  </div>
+  <div class="board" id="board"></div>
+  <div class="sub">
+    <h3>Cambio de alcance: de pantalla gigante a tablet</h3>
+    <p class="lead" style="margin-top:0">Al comienzo se pensó en un autoservicio con pantalla táctil de gran formato, como las de las cadenas de comida rápida. Al evaluar costos de hardware, mantenimiento e instalación, no entraba en el presupuesto. El catálogo se adaptó a una tablet en modo kiosco y conserva la misma función.</p>
+  </div>
+</section>
+
+<section id="interfaz">
+  <h2>Diseño de la interfaz</h2>
+  <p class="lead">Boceto presentado en la defensa del anteproyecto. A la izquierda, la pantalla principal con las seis categorías y el menú lateral. A la derecha, el resultado de abrir "Cuentos".</p>
+  <figure>
+    <img alt="Boceto de la interfaz: pantalla principal con categorías Cuentos, Novelas, Poesía, Teatro, Ensayo y Diccionarios; y pantalla de la categoría Cuentos con ocho títulos" src="interfaz.jpg">
+    <figcaption>Anexo del informe de avance. Las categorías son Cuentos, Novelas, Poesía, Teatro, Ensayo y Diccionarios, cada una con un contador de ejemplares.</figcaption>
+  </figure>
+  <div class="tools">
+    <div class="tool"><span class="label">Cómo se usa</span><p>El usuario se acerca a la tablet, busca por título o autor, o entra por categoría. El sistema muestra la cantidad de ejemplares disponibles.</p></div>
+    <div class="tool"><span class="label">En desarrollo</span><p>Indicar la ubicación exacta del ejemplar: estante y repisa.</p></div>
+    <div class="tool"><span class="label">Requisitos</span><p>Tablet Android en modo kiosco y conexión a la base de datos interna de la biblioteca.</p></div>
+    <div class="tool"><span class="label">Herramienta de kiosco</span><p class="pend">Aún en evaluación</p></div>
+  </div>
+  <div class="tools">
+    <div class="tool"><span class="label">Lenguaje</span><p>Kotlin (con Java). Es el lenguaje que Google recomienda para Android.</p></div>
+    <div class="tool"><span class="label">Librerías y dependencias</span><p class="pend">Por definir</p></div>
+    <div class="tool"><span class="label">Repositorio</span><p class="pend">Aún no creado. Se prevé GitHub.</p></div>
+    <div class="tool"><span class="label">Uso de IA</span><p>Ninguno hasta ahora. Si se usa, se documentará qué partes y se validarán a mano.</p></div>
+  </div>
+</section>
+
+<section id="pruebas">
+  <h2>Pruebas</h2>
+  <p class="lead">Todavía no hay código, así que ningún caso se probó. Estos son los casos de caja negra previstos para cuando empiece la programación.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Caso</th><th>Entrada</th><th>Paso</th><th>Resultado esperado</th><th>Resultado real</th></tr></thead>
+    <tbody>
+      <tr><td>Búsqueda por título o autor</td><td>Texto válido</td><td>Escribir en el buscador y confirmar</td><td>Muestra los libros que coinciden</td><td class="pend">Pendiente de prueba</td></tr>
+      <tr><td>Búsqueda sin resultados</td><td>Texto que no está en el catálogo</td><td>Escribir en el buscador y confirmar</td><td>Mensaje claro de "Sin resultados"</td><td class="pend">Pendiente de prueba</td></tr>
+      <tr><td>Navegación por categoría</td><td>Selección de una categoría</td><td>Tocar la categoría</td><td>Muestra los libros de esa categoría con disponibilidad</td><td class="pend">Pendiente de prueba</td></tr>
+    </tbody></table></div>
+  <p class="note" style="margin-top:.8rem">Después se evaluará la usabilidad con usuarios reales: efectividad, eficiencia y satisfacción.</p>
+</section>
+
+<section id="cronograma">
+  <h2>Cronograma</h2>
+  <div class="sub"><h3>Los tres años del proyecto</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Año</th><th>Etapa</th><th>Actividades clave</th><th>Producto</th><th>Cierre</th></tr></thead>
+    <tbody>
+      <tr><td>1º</td><td>Análisis y validación</td><td>Definición del problema (desorganización de la biblioteca) y de la solución (catálogo de disponibilidad en tablet). Diseño de la interfaz.</td><td>Anteproyecto aprobado y sitio publicado</td><td>ICIENTEC · Lanzamiento</td></tr>
+      <tr class="now"><td>2º (actual)</td><td>Revisión y planificación técnica</td><td>Revisión de funcionalidades MoSCoW, elección de Java/Kotlin, planificación de Git/GitHub, cronograma extendido.</td><td>Diseño conceptual del prototipo</td><td>ICIENTEC · Demostración</td></tr>
+      <tr><td>3º</td><td>Implementación y evaluación</td><td>Programación de los módulos, pruebas con usuarios, documentación técnica final.</td><td>Sistema implementado y defensa formal</td><td>ICIENTEC · Defensa final</td></tr>
+    </tbody></table></div></div>
+  <div class="sub"><h3>Lo que resta de 2º hacia 3º</h3>
+  <p class="note" style="margin-bottom:.7rem">Tentativo: aún no hay fechas institucionales confirmadas para el cierre de 2º curso.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Actividad</th><th>Mes</th><th>Responsable</th><th>Entregable</th></tr></thead>
+    <tbody>
+      <tr><td>Programación de módulos críticos (búsqueda y disponibilidad)</td><td class="pend">Por definir</td><td>María Julia (Programación)</td><td>Prototipo funcional inicial</td></tr>
+      <tr><td>Configuración del modo kiosco en la tablet</td><td class="pend">Por definir</td><td>Equipo completo</td><td>Tablet configurada</td></tr>
+      <tr><td>Pruebas con usuarios (piloto)</td><td class="pend">Por definir</td><td>Equipo completo</td><td>Informe de pruebas 1</td></tr>
+      <tr><td>Ajustes y mejoras</td><td class="pend">Por definir</td><td>Programación</td><td>Versión 1.1</td></tr>
+      <tr><td>Documentación y cierre de la etapa</td><td class="pend">Por definir</td><td>Mia (Documentación)</td><td>Informe de avance final</td></tr>
+    </tbody></table></div></div>
+</section>
+
+<section id="equipo">
+  <h2>Equipo y método de trabajo</h2>
+  <div class="team" style="margin-top:1.2rem">
+    <div class="person"><div class="role">Coordinación y QA</div><div>Yessenia Abigail Lesme Villasanti</div></div>
+    <div class="person"><div class="role">Programación</div><div>María Julia Fernández Portillo</div></div>
+    <div class="person"><div class="role">Documentación</div><div>Mia Eliette Riveros Riquelme</div></div>
+  </div>
+  <div class="tools">
+    <div class="tool"><span class="label">Control de versiones</span><p class="pend">Sin implementar. Git y GitHub están previstos.</p></div>
+    <div class="tool"><span class="label">Tablero de tareas</span><p class="pend">Sin usar. Se evaluará un tablero Kanban.</p></div>
+  </div>
+</section>
+
+<section id="nueva">
+  <h2>Nueva entrada</h2>
+  <p class="lead">Agregá una observación al cuaderno. Se guarda solo en este navegador y aparece marcada con borde punteado.</p>
+  <form id="form">
+    <div class="two">
+      <label for="f-title">Título<input id="f-title" required maxlength="90" placeholder="Qué pasó o qué se decidió"></label>
+      <label for="f-date">Fecha<input id="f-date" type="date"></label>
+      <label for="f-type">Tipo<select id="f-type">
+        <option value="hallazgo">Hallazgo</option><option value="decision">Decisión</option><option value="avance">Avance</option><option value="pendiente">Pendiente</option></select></label>
+    </div>
+    <label for="f-obs">Observado<textarea id="f-obs" required placeholder="Lo que se vio o se hizo, sin interpretar"></textarea></label>
+    <label for="f-int">Interpretación<textarea id="f-int" placeholder="Qué significa para el proyecto"></textarea></label>
+    <button class="btn" type="submit">Guardar entrada</button>
+    <p class="note" id="formMsg" role="status"></p>
+  </form>
+</section>
+
+<section id="refs">
+  <h2>Referencias</h2>
+  <ol class="refs" style="margin-top:1.2rem">
+    <li>Beckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. <i>Journal of Statistics and Data Science Education, 29</i>(S1), S132–S144.</li>
+    <li>Bjarnason, E., Lang, F., & Mjöberg, A. (2023). An empirically based model of software prototyping: A mapping study and a multi-case study. <i>Empirical Software Engineering, 28</i>, Artículo 115.</li>
+    <li>Charalampidou, S., Ampatzoglou, A., Karountzos, E., & Avgeriou, P. (2021). Empirical studies on software traceability: A mapping study. <i>Journal of Software: Evolution and Process, 33</i>(2), e2294.</li>
+    <li>Didkivska & Vakaliuk (2026). Kanban con estudiantes. <i>Discover Education</i>.</li>
+    <li>Escolano, V. J. T., Lancheta, A. F., Daggon, R. Y., Polentinos, L. J., Caluma, A. M., Hernane, S., & Agbunag, M. A. (2025). Elevating satisfaction: Library system impact on user material access and satisfaction. <i>Global Academic Journal of Humanities and Social Sciences, 7</i>(5), 209–215.</li>
+    <li>Gupta, N. K. (2024). Revolution of Kotlin in mobile development. <i>International Journal of Research Publication and Reviews, 5</i>(8), 262–265.</li>
+    <li>Kravchenko, T., Bogdanova, T., & Shevgunov, T. (2022). Ranking requirements using MoSCoW methodology in practice. En R. Silhavy (Ed.), <i>Cybernetics perspectives in systems</i> (pp. 188–199). Springer.</li>
+    <li>Martinez, L., Garritsen, K., Baguet, J., Grigolon, A., Münzel, K., Keserü, I., & Geurs, K. (2024). Digital kiosks and inclusivity: A novel perspective on mobility hubs. <i>European Transport Research Review, 16</i>(1), Artículo 53.</li>
+    <li>Ntoa, S. (2025). Usability and user experience evaluation in intelligent environments: A review and reappraisal. <i>International Journal of Human-Computer Interaction, 41</i>(5), 2829–2858.</li>
+    <li>Pressman, R. S., & Maxim, B. R. (2020). <i>Ingeniería del software: Un enfoque práctico</i> (8.ª ed.). McGraw-Hill.</li>
+    <li>Project Management Institute. (2021). <i>A guide to the project management body of knowledge (PMBOK guide)</i> (7th ed.). PMI.</li>
+    <li>Santi, P. A. D. A., Afwani, R., Albar, M. A., Anjarwani, S. E., & Mardiansyah, A. Z. (2022). Black box testing with equivalence partitioning and boundary value analysis methods. <i>Proceedings of MIMSE-I-C 2022</i> (pp. 207–219). Atlantis Press.</li>
+    <li>Yang, H., & Wong, R. (2024). An in-depth literature review of e-portfolio implementation in higher education. <i>Issues and Trends in Learning Technologies, 12</i>(1), 65–101.</li>
+  </ol>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Ñe'ẽryru Tecnológico · 2º BATÍN · Octubre 2026</span><span>Miguela Rodriguez Araujo</span></div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
