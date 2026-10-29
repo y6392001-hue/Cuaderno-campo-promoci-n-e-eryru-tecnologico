@@ -1,0 +1,16 @@
+[
+  {"id": 1,  "titulo": "El principito", "autor": "Antoine de Saint-Exupéry", "categoria": "Cuentos", "ejemplares": {"total": 3, "disponibles": 2}},
+  {"id": 2,  "titulo": "Caperucita roja", "autor": "Charles Perrault", "categoria": "Cuentos", "ejemplares": {"total": 2, "disponibles": 1}},
+  {"id": 3,  "titulo": "El patito feo", "autor": "Hans Christian Andersen", "categoria": "Cuentos", "ejemplares": {"total": 2, "disponibles": 0}},
+  {"id": 4,  "titulo": "Hansel y Gretel", "autor": "Hermanos Grimm", "categoria": "Cuentos", "ejemplares": {"total": 1, "disponibles": 1}},
+  {"id": 5,  "titulo": "Ricitos de Oro y los tres osos", "autor": "Robert Southey", "categoria": "Cuentos", "ejemplares": {"total": 2, "disponibles": 2}},
+  {"id": 6,  "titulo": "El zapatero y los duendes", "autor": "Hermanos Grimm", "categoria": "Cuentos", "ejemplares": {"total": 1, "disponibles": 0}},
+  {"id": 7,  "titulo": "Los tres cerditos", "autor": "Tradicional", "categoria": "Cuentos"},
+  {"id": 8,  "titulo": "La liebre y la tortuga", "autor": "Esopo", "categoria": "Cuentos", "ejemplares": {"total": 2, "disponibles": 1}},
+  {"id": 9,  "titulo": "Don Quijote de la Mancha", "autor": "Miguel de Cervantes", "categoria": "Novelas", "ejemplares": {"total": 4, "disponibles": 3}},
+  {"id": 10, "titulo": "Hijo de hombre", "autor": "Augusto Roa Bastos", "categoria": "Novelas", "ejemplares": {"total": 2, "disponibles": 1}},
+  {"id": 11, "titulo": "Rimas y leyendas", "autor": "Gustavo Adolfo Bécquer", "categoria": "Poesía", "ejemplares": {"total": 2, "disponibles": 1}},
+  {"id": 12, "titulo": "La casa de Bernarda Alba", "autor": "Federico García Lorca", "categoria": "Teatro", "ejemplares": {"total": 3, "disponibles": 2}},
+  {"id": 13, "titulo": "El laberinto de la soledad", "autor": "Octavio Paz", "categoria": "Ensayo", "ejemplares": {"total": 1, "disponibles": 1}},
+  {"id": 14, "titulo": "Diccionario de la lengua española", "autor": "Real Academia Española", "categoria": "Diccionarios", "ejemplares": {"total": 2, "disponibles": 2}}
+]
